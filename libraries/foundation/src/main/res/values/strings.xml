@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- [disney_snackbar_view.xml] -->
+    <string name="b_dismiss_content_description">Closes the view dismissing the error warning</string>
+
+</resources>

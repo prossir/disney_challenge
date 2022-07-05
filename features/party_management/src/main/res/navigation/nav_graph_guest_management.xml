@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_guest_management"
+    app:startDestination="@id/listGuestsFragment">
+
+    <fragment
+        android:id="@+id/listGuestsFragment"
+        android:name="paolo.disney.party_management.platform.front.list_guests.ListGuestsFragment"
+        android:label="List Guests"
+        tools:layout="@layout/fragment_list_guests" >
+        <action
+            android:id="@+id/action_listGuests_to_confirmParty"
+            app:destination="@id/confirmPartyFragment" />
+        <action
+            android:id="@+id/action_listGuests_to_resolveConflictAboutParty"
+            app:destination="@id/resolveConflictAboutPartyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addGuestFragment"
+        android:name="paolo.disney.party_management.platform.front.add_guest.AddGuestFragment"
+        android:label="Add Guest"
+        tools:layout="@layout/fragment_add_guest" />
+
+    <fragment
+        android:id="@+id/confirmPartyFragment"
+        android:name="paolo.disney.party_management.platform.front.confirm_party.ConfirmPartyFragment"
+        android:label="Confirm Party"
+        tools:layout="@layout/fragment_confirm_party" />
+
+    <fragment
+        android:id="@+id/resolveConflictAboutPartyFragment"
+        android:name="paolo.disney.party_management.platform.front.resolve_conflict_about_party.ResolveConflictAboutPartyFragment"
+        android:label="Resolve Conflict About Party"
+        tools:layout="@layout/fragment_resolve_conflict_about_party"/>
+
+</navigation>

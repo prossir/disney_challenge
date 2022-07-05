@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="paolo.disney.party_management.platform.front.common.views.GuestManagementViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_guest_by_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toTopOf="@+id/tv_warning_about_reservation_logic"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="30"
+            tools:listitem="@layout/item_selectable_guest" />
+
+        <ImageView
+            android:id="@+id/iv_info"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/iv_info_content_description"
+            android:src="@drawable/ic_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_warning_about_reservation_logic" />
+
+        <TextView
+            android:id="@+id/tv_warning_about_reservation_logic"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:padding="8dp"
+            android:text="@string/s_tv_warning_about_reservation_logic_text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/mb_register_party"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="spread"
+            app:layout_constraintHeight_min="72dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_info"
+            app:layout_constraintTop_toBottomOf="@+id/rv_guest_by_status" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_register_party"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/mb_register_party_content_description"
+            android:enabled="@{viewModel.party.validator.canTryConfirmingParty}"
+            android:onClick="@{_ -> viewModel.registerPartyOfGuests()}"
+            android:text="@string/s_mb_register_party_text"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

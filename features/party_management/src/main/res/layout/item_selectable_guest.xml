@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="guest"
+            type="paolo.disney.party_management.platform.front.common.dtos.GuestModel" />
+
+        <variable
+            name="listener"
+            type="paolo.disney.party_management.platform.front.list_guests.adapter.OnGuestClicked" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/cb_check_guest_as_party_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@{guest.checkedStatusDescription}"
+            android:buttonTint="@color/cb_party_member_selected"
+            android:onCheckedChanged="@{(compoundButton, checked) -> listener.onGuestChecked(guest, checked)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:checked="@{guest.checked}"
+            tools:checked="false" />
+
+        <TextView
+            android:id="@+id/tv_guest_full_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{guest.fullName}"
+            android:textSize="16sp"
+            android:contentDescription="@{guest.fullDescription}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cb_check_guest_as_party_member"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Dale Gibson" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

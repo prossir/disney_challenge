@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- [add_guest_fragment.xml] -->
+    <string name="iv_close_content_description">Closes the add guest option and returns the focus to the list of guests, without adding a new guest.</string>
+    <string name="tv_add_guest_title_text">Add Guest</string>
+    <string name="tl_guest_name_hint">Name</string>
+    <string name="tl_guest_lastname_hint">Lastname</string>
+    <string name="actv_state_text_default">Has reservation</string>
+    <string name="mb_add_guest_content_description">When this button is pressed after completing the name, lastname and reservation status of the new guest, it will save the data on the application and the new guest will be selectable to form a party</string>
+    <!-- Options for the status-->
+    <string-array name="status_options">
+        <item>Has reservation</item>
+        <item>Does not have reservation</item>
+    </string-array>
+
+    <!-- [fragment_confirm_party.xml] -->
+    <string name="tv_confirmation_message_text">Party Confirmed!</string>
+
+    <!-- [fragment_list_guests.xml] -->
+    <string name="iv_info_content_description">Important information to the end of this icon.</string>
+    <string name="s_tv_warning_about_reservation_logic_text">At least one Guest in the party must have a reservation. Guests without reservations must remain in the same booking party in order to enter.</string>
+    <string name="s_mb_register_party_text">Continue</string>
+    <string name="mb_register_party_content_description">Continue button that when pressed on will let the user form a party of guests if there is no conflict due to reservations, or if there is, a screen to solve this conflicts</string>
+
+    <!-- [fragment_resolve_conflict_about_party.xml] -->
+    <string name="tv_conflict_message_text">Conflict Found!</string>
+
+    <!-- [menu_guest_management.xml] -->
+    <string name="i_new_guest_title">Add a new guest to the guest list</string>
+
+
+</resources>

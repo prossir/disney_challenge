@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main colors obtained from the material theme generator -->
+    <color name="colorPrimary">#0079bc</color>
+    <color name="colorPrimaryLight">#58a8ef</color>
+    <color name="colorPrimaryDark">#004e8b</color>
+
+    <color name="colorSecondary">#2a2a2a</color>
+    <color name="colorSecondaryLight">#525252</color>
+    <color name="colorSecondaryDark">#000000</color>
+
+    <color name="colorTextOnPrimary">#ffffff</color>
+    <color name="colorTextOnSecondary">#ffffff</color>
+
+    <!-- Colors taken from the design mockup of the client-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="velvetBlack">#00233C</color>
+    <color name="skyBlue">#B7E4F7</color>
+    <color name="neonGreen">#118900</color>
+
+</resources>
